@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  
+    <div class="events-container">
+        <h1>Upcoming Events</h1>
+
+        <% if (events && events.length > 0) { %>
+            <ul>
+                <% events.forEach(event => { %>
+                    <li>
+                        <h3><% event.name %></h3>
+                        <p><strong>Date:</strong> <%= event.date %></p>
+                        <p><strong>Location:</strong> <%= event.location %></p>
+                        <p><%= event.description %></p>
+                        <a href="/events/<% event.id %>">View Details</a>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No events available at the moment.</p>
+        <% } %>
+    </div>
+
+    <% include ../partials/footer.ejs %>
+</body>
+</html>

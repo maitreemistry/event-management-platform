@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+        color: #333;
+        font-size: 2em;
+    }
+
+    .form-container input, .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .form-container button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .form-container button:hover {
+        background-color: #45a049;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="form-container">
+    <h1>Submit Your Feedback</h1>
+
+    <form action="/feedback" method="POST">
+        <label for="event_id">Event:</label>
+        <select name="event_id" required>
+            <% events.forEach(event => { %>
+                <option value="<%= event.id %>"><%= event.name %></option>
+            <% }) %>
+        </select>
+    
+        <label for="rating"><br><br>Rating (1-5):</label>
+        <input type="number" name="rating" min="1" max="5" required>
+    
+        <label for="comments">Comments:</label>
+        <textarea name="comments" required></textarea>
+    
+        <button type="submit" onclick="function3()">Submit Feedback</button>
+    </form>
+</div>
+</div>
+</body>
+<script language="JavaScript">
+    function function3() { 
+        swal("Success!", "Feedback Submited.", "success");
+    }
+</script>
+</html>

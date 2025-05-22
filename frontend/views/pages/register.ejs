@@ -1,0 +1,24 @@
+// frontend/views/pages/register.ejs
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Event</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <% include ../partials/navbar.ejs %>
+    <h1>Register a New Event</h1>
+    <form action="/events/create" method="POST">
+        <label for="name">Event Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="date">Date:</label>
+        <input type="date" name="date" required><br>
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea><br>
+        <button type="submit">Register Event</button>
+    </form>
+    <% include ../partials/footer.ejs %>
+</body>
+</html>
