@@ -40,6 +40,6 @@ A simple web application built with **Express.js** and **PostgreSQL** for managi
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/event-management-platform.git
+git clone https://github.com/maitreemistry/event-management-platform.git
 cd event-management-platform
 npm install
