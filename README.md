@@ -14,7 +14,7 @@ A simple web application built with **Express.js** and **PostgreSQL** for managi
 
 - **Backend**: Node.js with Express.js
 - **Database**: PostgreSQL
-- **Frontend**: HTML + CSS (Basic UI via Bootstrap or custom)
+- **Frontend**: HTML + CSS 
 
 ## Screens Overview
 ![landing_page](landing.png)
