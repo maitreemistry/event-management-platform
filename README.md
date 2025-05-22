@@ -1,4 +1,4 @@
-# event-management-system
+# event-management-platform
 
 # Event Management Platform
 
